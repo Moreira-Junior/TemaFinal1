@@ -17,10 +17,10 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
-}
-
-post-processors {
-  post-processor "docker-tag" {
-    tag        = "ubuntu"
+  post-processors {
+    post-processor "docker-tag" {
+      tag        = "ubuntu"
+    }
   }
 }
+
