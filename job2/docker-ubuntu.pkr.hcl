@@ -20,7 +20,7 @@ build {
   provisioner "shell" {
   inline  = [
     "apt-get install sudo"
-  ],
+  ]
   only = ["docker"]
   }
   post-processors {
