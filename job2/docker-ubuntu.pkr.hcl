@@ -8,7 +8,7 @@ packer {
 }
 
 source "docker" "ubuntu" {
-  image  = ubuntu:xenial
+  image  = "ubuntu:xenial"
   commit = true
 }
 
