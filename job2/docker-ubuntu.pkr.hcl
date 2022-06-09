@@ -17,6 +17,13 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
+  provisioners: [{
+  "type": "shell",
+  "inline": [
+    "apt-get install sudo"
+  ],
+  "only": ["docker"]
+  }
   post-processors {
     post-processor "docker-tag" {
       tags        = ["ubuntu"]
