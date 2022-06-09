@@ -18,12 +18,6 @@ build {
     "source.docker.ubuntu"
   ]
 
-  provisioner "shell" {
-    environment_vars = [
-      "FOO=hello world",
-    ]
-  }
-
   post-processor "docker-tag" {
     repository = "job2"
     tags       = ["ubuntu-xenial"]
