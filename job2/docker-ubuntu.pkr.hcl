@@ -19,7 +19,7 @@ build {
   ]
   post-processors {
     post-processor "docker-tag" {
-      tag        = ["ubuntu"]
+      tags        = ["ubuntu"]
     }
   }
 }
