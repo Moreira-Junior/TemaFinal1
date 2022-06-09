@@ -17,10 +17,10 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
+}
 
+post-processors {
   post-processor "docker-tag" {
-    repository = "job2"
-    tags       = ["ubuntu-xenial"]
-    only       = ["docker.ubuntu"]
+    tag        = "ubuntu"
   }
 }
