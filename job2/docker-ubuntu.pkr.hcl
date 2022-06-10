@@ -23,10 +23,10 @@ build {
   ]
   only = ["docker"]
   }
-  post-processors {
-    post-processor "docker-tag" {
-      tags        = ["ubuntu"]
-    }
+  post-processor "docker-tag" {
+    repository = "learn-packer"
+    tags       = ["ubuntu-bionic", "packer-rocks"]
+    only       = ["docker.ubuntu-bionic"]
   }
 }
 
