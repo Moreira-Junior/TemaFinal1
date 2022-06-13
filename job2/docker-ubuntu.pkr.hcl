@@ -22,7 +22,7 @@ build {
   }
   post-processor "docker-tag" {
     repository = "juniormoreira88/job2"
-    tags       = ["job2", "juniormoreira88/job2:job2"]
+    tags       = ["1.0"]
   }
   post-processor "docker-push" {}
 }
