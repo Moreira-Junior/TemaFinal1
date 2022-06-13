@@ -1,6 +1,6 @@
 ---
 - name: Install Apache Tomcat10 using ansible
-  hosts: server1
+  hosts: ansible_host
   remote_user: ubuntu
   become: true
   tasks:
