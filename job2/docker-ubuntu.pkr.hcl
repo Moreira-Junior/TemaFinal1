@@ -22,7 +22,7 @@ build {
   }
   post-processors {
     post-processor "docker-import" {
-      repository = "juniormoreira88/job2
+      repository = "juniormoreira88/job2"
       tag        = "job2"
   }
     post-processor "docker-push" {}
