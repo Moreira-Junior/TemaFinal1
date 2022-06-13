@@ -17,11 +17,8 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
-  provisioner "shell" {
-  inline  = [
-    "apt-get install sudo"
-  ]
-  only = ["docker"]
+  provisioner "ansible" {
+    playbook_file = "./playbook.yml"
   }
   post-processor "docker-tag" {
     repository = "learn-packer"
