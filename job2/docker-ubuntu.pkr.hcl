@@ -25,10 +25,6 @@ build {
     tags       = ["job2"]
     only       = ["docker.ubuntu"]
   }
-  post-processor "docker-push" {
-    login=true
-    login_username = "junior_moreira88@hotmail.com"
-    login_password = "Teste1234"
-  }
+  post-processor "docker-push" {}
 }
 
