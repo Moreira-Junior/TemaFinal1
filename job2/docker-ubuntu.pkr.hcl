@@ -20,12 +20,10 @@ build {
   provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
-  post-processors {
-    post-processor "docker-tag" {
-      repository = "juniormoreira88/job2"
-      tag        = "job2"
-  }
-    post-processor "docker-push" {}
+  post-processor "docker-tag" {
+    repository = "juniormoreira88/job2"
+    tags       = ["job2"]
+    only       = ["docker.ubuntu"]
   }
 }
 
