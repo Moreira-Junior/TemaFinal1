@@ -18,7 +18,7 @@ build {
     "source.docker.ubuntu"
   ]
   provisioner "ansible" {
-    playbook_file = "./playbook.yml"
+    playbook_file = "job2/playbook.yml"
   }
   post-processor "docker-tag" {
     repository = "learn-packer"
