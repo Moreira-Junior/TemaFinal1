@@ -25,5 +25,6 @@ build {
     tags       = ["job2"]
     only       = ["docker.ubuntu"]
   }
+  post-processor "docker-push" {}
 }
 
