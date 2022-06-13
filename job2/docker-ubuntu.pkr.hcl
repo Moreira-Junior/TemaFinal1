@@ -21,7 +21,7 @@ build {
     playbook_file = "job2/playbook.yml"
   }
   post-processors {
-    post-processor "docker-import" {
+    post-processor "docker-tag" {
       repository = "juniormoreira88/job2"
       tag        = "job2"
   }
