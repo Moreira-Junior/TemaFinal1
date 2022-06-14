@@ -27,8 +27,8 @@ build {
   }
     post-processor "docker-push" {
       login = true
-      login_username = juniormoreira88
-      login_password = Teste1234
+      login_username = "juniormoreira88"
+      login_password = "Teste1234"
     }
   }
 }
