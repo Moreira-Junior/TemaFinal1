@@ -25,7 +25,11 @@ build {
       repository = "juniormoreira88/job2"
       tags        = ["job2"]
   }
-    post-processor "docker-push" {}
+    post-processor "docker-push" {
+      login = true
+      login_username = juniormoreira88
+      login_password = Teste1234
+    }
   }
 }
 
