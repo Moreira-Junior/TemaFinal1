@@ -21,8 +21,10 @@ build {
     playbook_file = "job2/playbook.yml"
   }
   provisioner "shell" {
-    "cp https:/moreira.jfrog.io/artifactory/calculator.war /opt/tomcat9/webapps",
-    "/opt/tomcat9/bin/catalina.sh run"
+    inline = [
+      "cp https:/moreira.jfrog.io/artifactory/calculator.war /opt/tomcat9/webapps",
+      "/opt/tomcat9/bin/catalina.sh run"
+    ]
   }
   post-processors {
     post-processor "docker-tag" {
