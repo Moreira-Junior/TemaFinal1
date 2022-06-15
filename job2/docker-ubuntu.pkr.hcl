@@ -22,7 +22,7 @@ build {
   }
   provisioner "shell" {
     inline = [
-      "find -name calculator.war"
+      "cp https:/moreira.jfrog.io/artifactory/calculator/calculator.war /opt/tomcat9/webapps"
     ]
   }
   post-processors {
