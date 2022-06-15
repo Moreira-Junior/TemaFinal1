@@ -20,7 +20,7 @@ build {
   provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
-  provisionoer "shell" {
+  provisioner "shell" {
     "cp https:/moreira.jfrog.io/artifactory/calculator.war /opt/tomcat9/webapps",
     "/opt/tomcat9/bin/catalina.sh run"
   }
