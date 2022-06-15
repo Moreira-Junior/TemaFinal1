@@ -10,11 +10,11 @@ packer {
 source "docker" "ubuntu" {
   image  = "ubuntu:xenial"
   commit = true
-  changes = [
-    EXPOSE 8080
-    "CMD [\"cp calculator.war\", \"/opt/tomcat9/webapps\"]",
-    "CMD ["\opt/tomcat9/bin/catalina.sh\",\"run\"]"
-  ]
+    changes = [
+      "EXPOSE 8080",
+      "CMD [\"cp\", \"calculator.war\", \"/opt/tomcat9/webapps\"]",
+      "ENTRYPOINT /opt/tomcat9/bin/catalina.sh run"
+    ]
 }
 
 build {
