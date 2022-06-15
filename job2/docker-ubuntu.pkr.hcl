@@ -13,7 +13,8 @@ source "docker" "ubuntu" {
     changes = [
       "EXPOSE 8080",
       "CMD [\"cp\", \"calculator.war\", \"/opt/tomcat9/webapps\"]",
-      "ENTRYPOINT /opt/tomcat9/bin/catalina.sh run"
+      "ENTRYPOINT /opt/tomcat9/bin/catalina.sh run",
+      "ENTRYPOINT tail -f /dev/null"
     ]
 }
 
