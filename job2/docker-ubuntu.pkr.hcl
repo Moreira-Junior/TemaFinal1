@@ -12,8 +12,8 @@ source "docker" "ubuntu" {
   commit = true
   changes = [
     EXPOSE 8080
-    "CMD [\"cp calculator.war\", \"/opt/tomcat9/webapps\"],
-    "CMD ["\opt/tomcat9/bin/catalina.sh\",\"run\"]
+    "CMD [\"cp calculator.war\", \"/opt/tomcat9/webapps\"]",
+    "CMD ["\opt/tomcat9/bin/catalina.sh\",\"run\"]"
   ]
 }
 
