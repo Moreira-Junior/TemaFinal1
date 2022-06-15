@@ -20,10 +20,9 @@ build {
   provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
-  provisioner "shell" {
-    inline = [
-      "cp calculator.war /opt/tomcat9/webapps"
-    ]
+  provisioner "file" {
+    source = "calculator.war"
+    destination = "/opt/tomcat9/webapps"
   }
   post-processors {
     post-processor "docker-tag" {
