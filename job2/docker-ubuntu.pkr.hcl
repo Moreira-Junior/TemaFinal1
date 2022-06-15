@@ -10,6 +10,11 @@ packer {
 source "docker" "ubuntu" {
   image  = "ubuntu:xenial"
   commit = true
+  changes = [
+    EXPOSE 8080
+    "CMD [\"cp calculator.war\", \"/opt/tomcat9/webapps\"],
+    "CMD ["\opt/tomcat9/bin/catalina.sh\",\"run\"]
+  ]
 }
 
 build {
@@ -19,10 +24,6 @@ build {
   ]
   provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
-  }
-  provisioner "file" {
-    source = "calculator.war"
-    destination = "/opt/tomcat9/webapps/calculator.war"
   }
   post-processors {
     post-processor "docker-tag" {
