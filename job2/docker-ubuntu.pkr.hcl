@@ -22,8 +22,7 @@ build {
   }
   provisioner "shell" {
     inline = [
-      "cp https:/moreira.jfrog.io/artifactory/calculator/calculator.war /opt/tomcat9/webapps",
-      "/opt/tomcat9/bin/catalina.sh run"
+      "cp /moreira.jfrog.io/artifactory/calculator/calculator.war /opt/tomcat9/webapps"
     ]
   }
   post-processors {
