@@ -9,6 +9,14 @@
         name: openjdk-11-jre
         state: present
 
+    - name: Create a Tomcat User
+      user:
+        name: tomcat
+ 
+    - name: Create a Tomcat Group
+      group:
+        name: tomcat
+
     - name: Create a Tomcat Directory
       file:
         path: /opt/tomcat9
