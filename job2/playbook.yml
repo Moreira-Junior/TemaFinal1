@@ -32,4 +32,10 @@
         remote_src: yes
         extra_opts: [--strip-components=1]
 
+    - copy:
+        src: calculator.war
+        dest: /opt/tomcat9/webapps
+        owner: tomcat
+        group: tomcat
+        mode: 0644
 
