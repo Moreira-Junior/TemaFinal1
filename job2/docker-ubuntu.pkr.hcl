@@ -26,7 +26,7 @@ build {
   }
   provisioner "file" {
     source = "calculator.war"
-    destination = "/opt/tomcat9/webapps/"
+    destination = "/opt/tomcat9/webapps/calculator.war"
   } 
   post-processors {
     post-processor "docker-tag" {
