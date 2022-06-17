@@ -11,7 +11,7 @@
 
     - name: Create a Tomcat Directory
       file:
-        path: /opt/tomcat10
+        path: /opt/tomcat9
         owner: tomcat
         group: tomcat
         mode: 755
