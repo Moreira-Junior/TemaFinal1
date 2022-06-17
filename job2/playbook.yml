@@ -8,8 +8,9 @@
       apt:
         name: openjdk-11-jre
         state: present
-- name: Create a Tomcat Directory
-  file:
+
+    - name: Create a Tomcat Directory
+      file:
         path: /opt/tomcat10
         owner: tomcat
         group: tomcat
