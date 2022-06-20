@@ -4,6 +4,10 @@
   remote_user: ubuntu
   become: true
   tasks:
+    - name: Update the System Packages
+      apt:
+        upgrade: yes
+        update_cache: yes 
     - name: Install JAVA
       apt:
         name: openjdk-8-jre
