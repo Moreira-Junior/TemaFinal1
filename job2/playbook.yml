@@ -9,20 +9,16 @@
         name: openjdk-8-jdk
         state: present
 
-    - name: Create a Tomcat User
-      user:
-        name: tomcat
- 
-    - name: Create a Tomcat Group
-      group:
-        name: tomcat
+    - name: download tomcat9
+      get_url:
+        url: https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
+        dest: /usr/
 
-
-    - name: download & unarchive tomcat9
+    - name: extracting tomcat9
       unarchive:
-        src: https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
-        dest: /usr/tomcat9/
+        src: /usr/apache-tomcat-9.0.62.tar.gz
+        dest: /usr/
         remote_src: yes
-        extra_opts: [--strip-components=1]
+
 
 
