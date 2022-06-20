@@ -16,7 +16,6 @@
         dest: /usr/
         remote_src: yes
 
-        
     - name: Installing JAVA
       apt:
         name: openjdk-17-jre
