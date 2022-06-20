@@ -12,7 +12,7 @@ source "docker" "ubuntu" {
   commit = true
     changes = [
       "EXPOSE 8080",
-      "ENTRYPOINT /opt/tomcat9/bin/catalina.sh run"
+      "ENTRYPOINT /home/tomcat9/bin/catalina.sh run"
     ]
 }
 
@@ -26,7 +26,7 @@ build {
   }
   provisioner "file" {
     source = "calculator.war"
-    destination = "/opt/tomcat9/webapps/calculator.war"
+    destination = "/home/tomcat9/webapps/calculator.war"
   } 
   post-processors {
     post-processor "docker-tag" {
