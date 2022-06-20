@@ -9,22 +9,6 @@
         name: openjdk-11-jre
         state: present
 
-    - name: Create a Tomcat User
-      user:
-        name: tomcat
- 
-    - name: Create a Tomcat Group
-      group:
-        name: tomcat
-
-    - name: Create a Tomcat Directory
-      file:
-        path: /home/tomcat9
-        owner: tomcat
-        group: tomcat
-        mode: 755
-        recurse: yes
-
     - name: download & unarchive tomcat9
       unarchive:
         src: https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
