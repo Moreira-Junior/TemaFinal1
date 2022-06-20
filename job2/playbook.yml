@@ -22,7 +22,7 @@
         path: /usr/tomcat9
         owner: tomcat
         group: tomcat
-        mode: 755
+        mode: 777
         recurse: yes
 
     - name: download & unarchive tomcat9
