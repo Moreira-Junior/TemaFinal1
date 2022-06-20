@@ -12,7 +12,7 @@ source "docker" "ubuntu" {
   commit = true
     changes = [
       "EXPOSE 8080",
-      "ENTRYPOINT /home/tomcat9/bin/catalina.sh run"
+      "ENTRYPOINT /usr/tomcat9/bin/catalina.sh run"
     ]
 }
 
@@ -24,8 +24,9 @@ build {
   provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
-  provisioner "shell" {
-    inline = ["cp /home/calculator/calculator.war /home/tomcat9/webapps"]
+  provisioner "file" {
+    source = "calculator.war"
+    destination = "/usr/tomcat9/webapps/calculator.war"
   } 
   post-processors {
     post-processor "docker-tag" {

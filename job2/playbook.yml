@@ -12,7 +12,7 @@
     - name: download & unarchive tomcat9
       unarchive:
         src: https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
-        dest: /home/tomcat9/
+        dest: /usr/tomcat9/
         remote_src: yes
         extra_opts: [--strip-components=1]
 
