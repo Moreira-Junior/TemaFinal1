@@ -21,10 +21,7 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
-  provisioner "shell"{
-    inline = ["apt update && apt install ansible -y"]
-  }
-  provisioner "ansible-local" {
+  provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
   provisioner "shell-local" {
