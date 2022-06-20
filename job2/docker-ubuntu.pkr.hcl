@@ -29,7 +29,7 @@ build {
   }
   provisioner "file" {
     source = "./calculator.war"
-    destination = "/usr/apache-tomcat-9.0.62/webapps"
+    destination = "/usr/apache-tomcat-9.0.62/webapps/calculator.war"
   } 
   post-processors {
     post-processor "docker-tag" {
