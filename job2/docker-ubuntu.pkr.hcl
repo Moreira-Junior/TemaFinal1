@@ -12,7 +12,6 @@ source "docker" "ubuntu" {
   commit = true
     changes = [
       "EXPOSE 8080",
-      "VOLUME /usr/tomcat9 /usr/tomcat9",
       "ENTRYPOINT /usr/apache-tomcat-9.0.62/bin/catalina.sh run"
     ]
 }
@@ -23,7 +22,10 @@ build {
     "source.docker.ubuntu"
   ]
   provisioner "shell"{
-    inline = ["apt update && apt install ansible -y"]
+    inline = [
+
+      "apt-get install ansible -y"
+    ]
   }
   provisioner "ansible-local" {
     playbook_file = "./job2/playbook.yml"
@@ -34,13 +36,13 @@ build {
   } 
   post-processors {
     post-processor "docker-tag" {
-      repository = "juniormoreira88/job2"
+      repository = var.repo
       tags        = ["job2"]
   }
     post-processor "docker-push" {
       login = true
-      login_username = "juniormoreira88"
-      login_password = "Teste1234"
+      login_username = var.user
+      login_password = var.pass
     }
   }
 }

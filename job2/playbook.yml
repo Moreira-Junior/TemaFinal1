@@ -4,16 +4,8 @@
   remote_user: ubuntu
   become: true
   tasks:
-    - name: Update the System Packages
-      apt:
-        upgrade: dist
-        update_cache: yes
-        
-    - name: Install JAVA
-      apt:
-        name: openjdk-17-jre
 
-    - name: download tomcat9
+    - name: downloading tomcat9
       get_url:
         url: https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
         dest: /usr/
@@ -24,5 +16,9 @@
         dest: /usr/
         remote_src: yes
 
+        
+    - name: Installing JAVA
+      apt:
+        name: openjdk-17-jre
 
 
