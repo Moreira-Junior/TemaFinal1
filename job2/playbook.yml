@@ -1,6 +1,6 @@
 ---
 - name: Install Apache Tomcat9 using ansible
-  hosts: 127.0.0.1
+  hosts: all
   remote_user: ubuntu
   become: true
   tasks:
