@@ -11,6 +11,14 @@ variable "repo" {
   type    = string
 }
 
+variable "user"{
+  type = string
+}
+
+variable "pass"{
+  type = string
+}
+
 source "docker" "ubuntu" {
   image  = "ubuntu:focal"
   commit = true
