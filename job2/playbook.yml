@@ -6,8 +6,9 @@
   tasks:
     - name: Update the System Packages
       apt:
-        upgrade: yes
-        update_cache: yes 
+        upgrade: dist
+        update_cache: yes
+        
     - name: Install JAVA
       apt:
         name: openjdk-17-jre
