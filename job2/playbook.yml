@@ -17,12 +17,6 @@
       group:
         name: tomcat
 
-    - name: Create a Tomcat Directory
-      file:
-        path: /usr/tomcat9
-        owner: tomcat
-        group: tomcat
-        mode: 777
 
     - name: download & unarchive tomcat9
       unarchive:
