@@ -25,7 +25,7 @@ build {
     playbook_file = "job2/playbook.yml"
   }
   provisioner "shell-local" {
-    inline["cp calculator.war /usr/tomcat9/webapps"]
+    inline = ["cp calculator.war /usr/tomcat9/webapps"]
   } 
   post-processors {
     post-processor "docker-tag" {
