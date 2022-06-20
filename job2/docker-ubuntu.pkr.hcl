@@ -21,7 +21,7 @@ build {
   sources = [
     "source.docker.ubuntu"
   ]
-  provisioner "ansible-local" {
+  provisioner "ansible" {
     playbook_file = "job2/playbook.yml"
   }
   provisioner "shell-local" {
