@@ -12,8 +12,7 @@ source "docker" "ubuntu" {
   commit = true
     changes = [
       "EXPOSE 8080",
-      "VOLUME /usr/tomcat9 /usr/tomcat9",
-       "ENTRYPOINT /usr/tomca9/bin/catalina.sh run"
+      "VOLUME /usr/tomcat9 /usr/tomcat9"
     ]
 }
 
