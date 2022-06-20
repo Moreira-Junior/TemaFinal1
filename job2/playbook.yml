@@ -23,7 +23,6 @@
         owner: tomcat
         group: tomcat
         mode: 777
-        recurse: yes
 
     - name: download & unarchive tomcat9
       unarchive:
