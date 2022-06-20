@@ -7,6 +7,10 @@ packer {
   }
 }
 
+variable "repo" {
+  type    = string
+}
+
 source "docker" "ubuntu" {
   image  = "ubuntu:focal"
   commit = true
