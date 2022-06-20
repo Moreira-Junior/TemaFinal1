@@ -27,8 +27,9 @@ build {
   provisioner "ansible-local" {
     playbook_file = "./job2/playbook.yml"
   }
-  provisioner "shell-local" {
-    inline = ["cp calculator.war /usr/tomcat9/webapps"]
+  provisioner "file" {
+    source = "./calculator.war"
+    destination = "/usr/apache-tomcat-9.0.62/webapps"
   } 
   post-processors {
     post-processor "docker-tag" {
