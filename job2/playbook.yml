@@ -6,7 +6,7 @@
   tasks:
     - name: Install JAVA
       apt:
-        name: openjdk-17-jre-headless
+        name: openjdk-17-jre
 
     - name: download tomcat9
       get_url:
